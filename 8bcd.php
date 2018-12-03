@@ -24,7 +24,14 @@
 
         echo '<br /> Matrix 2<br>';
         print_matrix($mat2, $p, $q);
-
+            
+        echo "<br>Transpose of matrix 1<br>";
+        for($i=0;$i<$m;$i++)
+        {
+            for($j=0;$j<$n;$j++)
+                echo $mat1[$j][$i]." ";
+            echo "<br>";
+        }
         echo '<br> Sum <br>';
         for($i=0;$i<3;$i++)
         {
