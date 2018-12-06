@@ -5,10 +5,18 @@
         $states = "Mississippi Alabama Texas Massachusetts Kansas";
         $arr = explode(' ', $states);
         $statesList = array();
-        $statesList[0] = reset(preg_grep('/xas$/', $arr));
-        $statesList[1] = reset(preg_grep('/^k.*s$/i', $arr));
-        $statesList[2] = reset(preg_grep('/^M.*s$/', $arr));
-        $statesList[3] = reset(preg_grep('/a$/', $arr));
+        
+        $match = preg_grep('/xas$/', $arr);
+        $statesList[0] = reset($match);
+        
+        $match = preg_grep('/^k.*s$/i', $arr);
+        $statesList[1] = reset($match);
+        
+        $match = preg_grep('/^M.*s$/', $arr);
+        $statesList[2] = reset($match);
+        
+        $match = preg_grep('/a$/', $arr);
+        $statesList[3] = reset($match);
         
         echo 'Input String: '.$states.'<br />';
         for($i=0;$i<4;$i++)
